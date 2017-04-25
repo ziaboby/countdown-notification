@@ -1,0 +1,57 @@
+{
+  "viewports": [
+    {
+      "name": "phone",
+      "width": 320,
+      "height": 768
+    },
+    {
+      "name": "tablet",
+      "width": 950,
+      "height": 1024
+    },
+    {
+      "name": "desktop_low",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "name": "desktop_medium",
+      "width": 1192,
+      "height": 1024
+    },
+    {
+      "name": "desktop_high",
+      "width": 1440,
+      "height": 1024
+    }
+  ],
+  "scenarios": [
+  {
+    "label": "HP",
+    "url": "/",
+    "hideSelectors": [],
+    "removeSelectors": [
+    ],
+    "selectors": [
+      "body"
+    ],
+    "readyEvent": null,
+    "delay": 0,
+    "onReadyScript": null,
+    "onBeforeScript": null
+  } 
+  ],
+  "paths": {
+    "bitmaps_reference": "../../../test/backstop_data/bitmaps_reference",
+    "bitmaps_test": "../../../test/backstop_data/bitmaps_test",
+    "compare_data": "../../../test/backstop_data/bitmaps_test/compare.json",
+    "casper_scripts": "../../../test/backstop_data/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["CLI", "browser"],
+  "cliExitOnFail": false,
+  "casperFlags": [],
+  "debug": false,
+  "port": 3000
+}

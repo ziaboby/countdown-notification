@@ -1,0 +1,156 @@
+/* line 1, ../sass/styles.scss */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  font-size: 10px;
+  color: #333;
+  cursor: default;
+}
+
+/* line 10, ../sass/styles.scss */
+a:hover {
+  opacity: .5;
+}
+
+/* line 15, ../sass/styles.scss */
+h1 {
+  font-size: 2rem;
+}
+
+/* line 19, ../sass/styles.scss */
+.timer__wrapper {
+  font-size: 2rem;
+  padding: 1em 0;
+}
+
+/* line 24, ../sass/styles.scss */
+.timer {
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  border: .1rem solid #555;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* line 33, ../sass/styles.scss */
+.timer--on:hover::after {
+  content: "STOP";
+  color: red;
+  background-color: white;
+  font-size: 2em;
+  display: inline-block;
+  font-weight: 700;
+  opacity: .7;
+  margin-top: 1.2em;
+  cursor: pointer;
+}
+
+/* line 45, ../sass/styles.scss */
+.timer__display {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*from Lea Verou CSS Secrets*/
+@keyframes going-aroud {
+  from {
+    transform: rotate(0turn) translateY(-4.3em) translateY(50%) rotate(1turn);
+  }
+  to {
+    transform: rotate(1turn) translateY(-4.3em) translateY(50%) rotate(0turn);
+  }
+}
+/* line 67, ../sass/styles.scss */
+.timer__btn-on {
+  width: .8em;
+  height: .8em;
+  display: block;
+  position: absolute;
+  top: -.8em;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: #4caf50;
+  border-radius: 50%;
+}
+/* line 78, ../sass/styles.scss */
+.timer__btn-on::before {
+  content: "start";
+  font-size: .5em;
+  display: none;
+  position: absolute;
+  bottom: 1.5em;
+  right: 1em;
+}
+/* line 86, ../sass/styles.scss */
+.timer__btn-on:hover::before {
+  display: inline-block;
+}
+/* line 90, ../sass/styles.scss */
+.timer--on > .timer__btn-on {
+  background-color: #999;
+  top: 0;
+  margin: calc(50% - .4em) auto 0;
+  /* NOTE center both orizontally and vertically*/
+  animation: going-aroud 3s infinite linear;
+  pointer-events: none;
+}
+/* line 97, ../sass/styles.scss */
+.timer--on > .timer__btn-on::before {
+  content: "stop";
+}
+/* line 101, ../sass/styles.scss */
+.timer--on > .timer__btn-on:hover, .timer--on:hover > .timer__btn-on {
+  animation-play-state: paused;
+  pointer-events: auto;
+}
+
+/* line 110, ../sass/styles.scss */
+.timer__controller {
+  font-size: .5em;
+  width: auto;
+  position: absolute;
+  right: -2em;
+  top: 42%;
+}
+/* line 117, ../sass/styles.scss */
+.timer--on > .timer__controller {
+  display: none;
+}
+/* line 121, ../sass/styles.scss */
+.timer__controller > a {
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* line 130, ../sass/styles.scss */
+.controller--up {
+  border-width: 0 1em 1em 1em;
+  border-color: transparent transparent #333 transparent;
+  margin-bottom: 15%;
+}
+
+/* line 136, ../sass/styles.scss */
+.controller--down {
+  border-width: 1em 1em 0 1em;
+  border-color: #333 transparent transparent transparent;
+}
+
+/* line 141, ../sass/styles.scss */
+.notice {
+  font-size: 1rem;
+  display: none;
+}
+
+/* line 146, ../sass/styles.scss */
+.notice--not-supported {
+  font-size: 2em;
+  color: red;
+  font-weight: 700;
+}

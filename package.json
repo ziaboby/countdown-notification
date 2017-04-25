@@ -1,0 +1,38 @@
+{
+  "name": "countdown-notification",
+  "version": "0.0.1",
+  "description": "Warning countdown ends with a browser notification",
+  "private": true,
+  "devDependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-clean-css": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-size": "^2.0.0",
+    "gulp-uglify": "^2.0.0",
+    "jsonfile": "^2.4.0",
+    "require-dir": "^0.1.0"
+  },
+  "scripts": {
+    "watch": "gulp watch",
+    "watchSass": "gulp watch-sass",
+    "compileCss": "gulp compile-css-dev",
+    "compileCssProd": "gulp compile-css-prod",
+    "watchJs": "gulp watch-js",
+    "compileJs": "gulp compile-js-dev",
+    "compileJsProd": "gulp compile-js-prod",
+    "installBackstopJS": "cd assets/lib/BackstopJS && npm install",
+    "createImagesRefBackstopJSdefault": "cd assets/lib/BackstopJS && gulp reference --configPath=../../../config/backstop.json",
+    "createImagesRefBackstopJS": "cd assets/lib/BackstopJS && gulp reference",
+    "testBackstopJSdefault": "cd assets/lib/BackstopJS && gulp test --configPath=../../../config/backstop.json",
+    "testBackstopJS": "cd assets/lib/BackstopJS && gulp test",
+    "compassDevDefault": "compass compile -c config/config.rb",
+    "compassDev": "compass compile",
+    "compassProdDefault": "compass compile -c config/config.rb -e production --force",
+    "compassProd": "compass compile -e production --force"
+  }
+}
